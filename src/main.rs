@@ -88,7 +88,7 @@ fn main() {
                 } => {
                     match statu {
                         Game::Running => {
-                            bird_speed_y = -0.0007;
+                            bird_speed_y = -0.0006;
                         },
                         Game::Start => {
                             bird_acc = 0.000000002;
@@ -108,6 +108,7 @@ fn main() {
                             wall_second_down.set_fill_color(Color::MAGENTA);
                             wall_second_down.set_position((wall_second_x, wall_dis + wall_second_h));
                             cnt = 0;
+                            lst = 2;
                             statu = Game::Running;
                         },
                         _ => ()
@@ -133,6 +134,7 @@ fn main() {
                     wall_second_down.set_fill_color(Color::MAGENTA);
                     wall_second_down.set_position((wall_second_x, 160. + wall_second_h));
                     cnt = 0;
+                    lst = 2;
                     statu = Game::Running;
                 },
                 _ => {}
